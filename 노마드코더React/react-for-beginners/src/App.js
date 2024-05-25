@@ -1,21 +1,17 @@
-import React, { useState, useEffect, createContext } from 'react';
-import Children from './Children';
-
-export const AppContext = createContext();
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './routes/Home';
+import Detail from './routes/Detail';
 
 function App() {
-  const user = {
-    name: '김주민',
-    job: '사망년',
-  };
   return (
-    <div>
-      <App.Context.Provider value={user}>
-        <div>
-          <Children />
-        </div>
-      </App.Context.Provider>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/movie/:id" element={<Detail />}></Route>
+      </Routes>
+    </Router>
   );
 }
+
 export default App;
