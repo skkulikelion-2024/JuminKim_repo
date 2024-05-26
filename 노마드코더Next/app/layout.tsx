@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     template: '%s | Next Movies',
     default: 'Next Movies',
   },
-  description: 'The best movies on the best framework',
+  description: 'The best movies on the best frameworks',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
